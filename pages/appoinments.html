@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Acne Clinic - Appointments</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/images/logo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/airbnb.css">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="lateral">
+        <div class="header">
+            <h5>Acme Clinic</h5>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+                <li class="patients"><a href="patients.html"><i class="fa-solid fa-user-group"></i>Patients</a></li>
+                <li class="appointments active"><a href="appoinments.html"><i class="fa-regular fa-calendar"></i>Appointments</a></li>
+                <li><a href="settings.html"><i class="fa-solid fa-gear"></i>Settings</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="barsMenu">
+        <div class="barsOptions">
+          <a href="#" class="" id="closeMenu"><i class="fa-solid fa-xmark"></i></a>
+          <ul>
+              <li class="dashboard"><a href="#"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+              <li><a href="patients.html"><i class="fa-solid fa-user-group"></i>Patients</a></li>
+              <li><a href="appoinments.html"><i class="fa-regular fa-calendar"></i>Appointments</a></li>
+              <li><a href="settings.html"><i class="fa-solid fa-gear"></i>Settings</a></li>
+          </ul>
+      </div>
+    </div>  
+
+    <div class="contenedor">
+
+        <nav class="navbarra">
+            <div class="container-fluid">
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" id="searchInput" placeholder="Search Appointment..." aria-label="Search">
+              </form>
+            </div>
+            <div class="title-navbar">
+                <div class="iconDiv">
+                  <a href=""><img src="/static/images/icon.png" id="icon" alt=""></a>
+                  <span id="closesesion" class="closesesion">Cerrar Sesion</span>
+                </div>
+                <h5 id="welcomeUser"></h5>
+                <div class="boxBars">
+                    <i id="bars" class="fa-solid fa-bars"></i>
+                  </div>
+              </div>
+          </nav>
+
+        <div class="contenido">
+            <div class="titles">
+                <h4>Appointments</h4>
+                <div class="selector">
+                    <i class="fa-solid fa-filter"></i>
+                    <select name="" id="selectFilter">
+                        <option value="ALL">ALL</option>
+                        <option value="CANCELED">CANCELED</option>
+                        <option value="PENDING">PENDING</option>
+                        <option value="DONE">DONE</option>
+                    </select>
+                </div>
+                <a name="" id="openFormAppBtn" class="btn" href="#" role="button">Add Appointment</a>
+        </div>  
+
+        <section class="tabla_back">
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>DNI</th>
+                        <th>Date</th>
+                        <th>Hour</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <div class="forms" id="formCreateAppointment">
+        <div class="form-group">
+            <div class="titles-form">
+                <h5>Create Appointment</h5>
+                <a href="#" class="closeButton" id="closeFormAppBtn"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+    
+            <form id="patientForm">
+                <div class="mb-3" id="search">
+                    <label class="labelTitle" for="name">Search Patient</label>
+                    <input type="text" autocomplete="off" class="form-control" id="searchPatient" placeholder="Enter patient DNI">
+                    <ul id="autocomplete-list" style="display: none;"></ul>
+                </div>
+                <div class="mb-3">
+                    <label class="labelTitle" for="email">Day</label>
+                    <input type="date" class="form-control inputDate" id="dayApp" placeholder="Select Day">
+                </div>
+                <div class="mb-3">
+                    <label class="labelTitle" for="dni">Available times</label>
+                    <select class="form-control" name="" id="hourApp"></select>
+                </div>
+                <div class="mb-3">
+                    <label class="labelTitle" for="motivo">Reason for Appointment</label>
+                    <input type="text" class="form-control" id="motivoApp" placeholder="Enter reason for appoinment">
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="forms" id="formEditAppointment">
+        <div class="form-group">
+            <div class="titles-form">
+                <h5>Edit Appointment</h5>
+                <a href="#" class="closeButtonEdit" id="closeFormAppBtnEdit"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+    
+            <form id="patientForm">
+                <div class="mb-3" id="search">
+                    <label class="labelTitle" for="name">Patient</label>
+                    <input type="text" autocomplete="off" class="form-control" id="namePatient" placeholder="Enter patient DNI" readonly>
+                    <ul id="autocomplete-list" style="display: none;"></ul>
+                </div>
+                <div class="mb-3">
+                    <label class="labelTitle" for="email">Day</label>
+                    <input type="date" class="form-control inputDate" id="dayAppEdit" placeholder="Enter appoinment day">
+                </div>
+                <div class="mb-3">
+                    <label class="labelTitle" for="dni">Available times</label>
+                    <select class="form-control" name="" id="hourAppEdit"></select>
+                </div>
+                <div class="mb-3">
+                    <label class="labelTitle" for="motivo">Reason for Appointment</label>
+                    <input type="text" class="form-control" id="motivoAppEdit" placeholder="Enter reason for appoinment">
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+
+           
+    <script src="https://kit.fontawesome.com/a8b1c63967.js" crossorigin="anonymous"></script>
+    <script type="module" src="/static/js/appointment.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    </body>
+</html>

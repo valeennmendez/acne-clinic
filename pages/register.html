@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Acne Clinic - Register</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/register.css">
+    <link rel="shortcut icon" href="/static/images/logo.jpeg" type="image/x-icon">
+
+</head>
+<body> 
+    <div class="container">
+        <div class="information">
+            <h3>Acne Clinic</h3>
+            <p>Please register to have access to the system. Remember that you must wait for one of the administrators to accept the registration request</p>
+            <div class="loginText">
+                <p class="">Do you already have an account? <br> <a href="login.html">Login</a></p>
+            </div>
+        </div>
+        <div class="container-form">
+            <div class="titles">
+                <h2>Account registration</h2>
+            </div>
+            <div class="formulario">
+                <form class="boxForm" action="" id="boxForm" >
+                    <div class="group">
+                      <div class="inp">
+                            <label for="">Full Name</label>
+                            <input type="text" class="input" name="" id="name" placeholder="Enter your name"  autocomplete="off">
+                      </div> 
+                      <div class="inp">
+                            <label for="">Email Account</label>
+                            <input type="email" class="input" name="" id="email" placeholder="Enter your email"  autocomplete="off">
+                      </div> 
+                      <div class="inp">
+                            <label for="">Phone</label>
+                            <input type="tel" class="input" name="" id="phone" placeholder="Enter your phone"  autocomplete="off">
+                      </div> 
+                      <div class="inp">
+                            <label for="">Password</label>
+                            <input type="password" class="input" name="" id="password"  placeholder="Enter your password" autocomplete="off">
+                      </div>
+                      <div class="inp">
+                            <label for="">Repeat Password</label>
+                            <input type="password" class="input" name="" id="repeatpass"  placeholder="Repeat your password" autocomplete="off">
+                      </div>
+                      <div class="inp">
+                        <button type="submit" class="btn" id="submitBtn">Register Account</button>
+                      </div>
+                      <h6 class="errorText" id="errorText"></h6> 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="accountCreate">
+            <h1>Account created successfully</h1>
+            <p>Remember that you must wait for the approval of your account</p>
+            <div class="boxBtn">
+                <a href="login.html">Continuar</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/static/js/register.js"></script>
+</body>
+</html>
